@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Negocio Fechado - Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='img/dashboard_img/apple-icon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='img/icons/favicon.ico')}}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/templatemo.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/custom.css')}}">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/fontawesome.min.css')}}">
+
+    <!-- Load map styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/style.css')}}">
+<!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
+
+<body>
+    <!-- Start Top Nav -->
+   
+        
+                
+            </div>
+        </div>
+    </nav>
+    <!-- Close Top Nav -->
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="home">
+                <img src="{{url_for('static', filename='img/dashboard_img/ at 17.28.18.jpeg')}}" width="250px"  alt="">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link link-personalizado" href="{{url_for('home')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-personalizado" href="{{url_for('about')}}">sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-personalizado" href="{{url_for('consultoria')}}">consultoria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-personalizado" href="{{url_for('contato')}}">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="pesquisar ...">
+                    <button type="submit" class="input-group-text bg-success text-light input-personalizado">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Start Content Page -->
+
+
+    <!-- Start Map -->
+    
+    <!-- Ena Map -->
+
+    <!-- Start Contact -->
+    <div class="container py-5">
+        <div class="row py-5">
+            <form class="col-md-9 m-auto" method="post" role="form">
+                <div class="row">
+                    <h2 class="h2-container">Entre em contato conosco</h2>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputname">Nome</label>
+                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nome">
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputemail">Email</label>
+                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputsubject">assunto</label>
+                    <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="assunto">
+                </div>
+                <div class="mb-3">
+                    <label for="inputmessage">Mensagem</label>
+                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Mensagem" rows="8"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col text-end mt-2">
+
+                        <button type="submit" class="btn btn-success btn-lg px-3 input-personalizado ">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+
+    <!-- Start Footer -->
+     <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo h2-personalizado">Negocio Fechado</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none link-personalizado" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none link-personalizado" href="negocio.fechado.of@gmail.com">negocio.fechado.of@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Mais Infomaçoes</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none link-personalizado" href="#">Home</a></li>
+                        <li><a class="text-decoration-none link-personalizado" href="#">sobre nos</a></li>
+                        <li><a class="text-decoration-none link-personalizado" href="#">politica de privacidade</a></li>
+                        <li><a class="text-decoration-none link-personalizado" href="#">trabalhe conosco</a></li>
+                        <li><a class="text-decoration-none link-personalizado" href="#">fale conosco</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row text-light mb-4">
+                <div class="col-12 mb-3">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <img src="{{url_for('static', filename='img/dashboard_img/negocio_fechado-removebg fundo escuro-preview.svg')}}" width="200px">
+                    <label class="sr-only" for="subscribeEmail">Email address</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control bg-dark border-light " id="subscribeEmail" placeholder="Email">
+                        <div class="input-group-text btn-success text-light input-personalizado">Escreva</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="{{url_for('static', filename='js/dashboard_js/jquery-1.11.0.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/dashboard_js/jquery-migrate-1.2.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/dashboard_js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/dashboard_js/templatemo.js')}}"></script>
+    <script src="{{url_for('static', filename='js/dashboard_js/custom.js')}}"></script>
+    <!-- End Script -->
+</body>
+
+</html>

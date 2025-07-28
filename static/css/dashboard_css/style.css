@@ -1,0 +1,89 @@
+.link-personalizado {
+    color: rgb(0, 68, 255) !important; /* o !important força a cor caso o Bootstrap tente sobrescrever */
+  }
+  .link-personalizado:hover {
+    background-color: rgb(0, 68, 255) !important;
+    color: white !important;
+  }
+  .b-personalizado{
+    font-family: Arial, Helvetica, sans-serif  !important;
+    color: rgb(255, 255, 255) !important;
+  }
+  .h1-personalizado{
+    color: rgb(255, 255, 255) !important;
+  }
+
+ .img-container{
+  padding-right: 60px !important;
+ }
+.btn-personalizado{
+  background-color: rgb(0, 68, 255) !important;
+}
+.input-personalizado{
+  background-color: rgb(0, 68, 255) !important;
+  color:white !important ;
+}
+.h2-personalizado{
+  color: white !important;
+}
+
+.carrosel-personalizado{
+  color: rgb(0, 68, 255)!important;
+}
+.form-contanier{
+background-color: rgb(255, 214, 7);
+width: 70%;
+margin: auto;
+margin-bottom: 60px;
+border-radius: 10px;
+}
+.form-ipt{
+  width: 50%;
+  border: 1px solid rgb(130, 126, 126);
+}
+.div-ipt{
+  padding-left: 40px;
+}
+.btn-ipt{
+   margin-left: 40px;
+   margin-bottom: 20px;
+   color: white;
+}
+.h2-form{
+  margin-bottom: 30px;
+  color: rgb(255, 251, 251);
+  padding-top: 20px;
+}
+.form-label{
+  color: white;
+}
+.h2-container{
+ padding-left: 100px;
+ padding-bottom: 40px
+}
+.car-personalizado{
+  background-color: rgb(20, 20, 254);
+}
+.h2-class{
+color: white;
+}
+
+.card-style{
+  margin-left: 40px;
+  margin: 10px;
+  
+}
+
+.btn-primary{
+  color: white;
+}
+
+.form-al{
+  margin: auto;
+  width: 50%;
+  margin-top: 60px;
+}
+.form-cont{
+  float: right;
+
+}

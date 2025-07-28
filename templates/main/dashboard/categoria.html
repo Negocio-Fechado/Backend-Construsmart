@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>ConstruSmart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='img/dashboard_img/apple-icon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='img/icons/favicon.ico')}}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/templatemo.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/custom.css')}}">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/style.css')}}">
+
+</head>
+<body>
+    
+ <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <img src="{{url_for('static', filename='img/dashboard_img/ConstruSmart2025-06-24 at 17.28.18.jpeg')}}"  width="250px">
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('home')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('about')}}">sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('consultoria')}}">consultoria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('contato')}}">Contato</a>
+                        </li>
+                    </ul>
+                     
+                </div>
+                     
+                </div>
+                 <a href="{{url_for('cadastrarProduto')}}" class="btn btn-primary "> Disponibiize sua ferramenta !</a>
+            </div>
+               
+        </div>
+    </nav>
+    <!-- Close Header -->
+<!--search de pesquisa--> 
+<nav class="navbar bg-body-tertiary" style="margin-top: 10px;">
+  <div class="container-fluid">
+    <form action="{{url_for('pesquisa')}}" class="d-flex" role="search" style="width: 50%;">
+      <input class="form-control me-2" type="search" name="pesquisar" placeholder="pesquisar" aria-label="Search"/>
+      <button class="btn btn-primary" type="submit">pesquisar</button>
+    </form>
+  </div>
+</nav>
+{% for i in produtos %}
+<div class="card" style="width: 18rem;">
+  <img src="{{ url_for('static', filename=i.imagem.caminho)}}"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{i.nome}}</h5>
+    <p class="card-text">{{i.descricao}}</p>
+    <h5 class="card-title">{{i.preco}}</h5>
+    <a href="#" class="btn btn-primary"> Alugue agora !</a>
+  </div>
+</div>
+{% endfor %}
+
+<!--fim dos cards-->
+
+
+</body>

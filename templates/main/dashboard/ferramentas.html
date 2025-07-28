@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>ConstruSmart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='img/dashboard_img/apple-icon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='img/icons/favicon.ico')}}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/templatemo.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/custom.css')}}">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/style.css')}}">
+
+</head>
+<body>
+    
+ <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <img src="{{url_for('static', filename='img/dashboard_img/ConstruSmart2025-06-24 at 17.28.18.jpeg')}}"  width="250px">
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('home')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('about')}}">sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('consultoria')}}">consultoria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('contato')}}">Contato</a>
+                        </li>
+                    </ul>
+                     
+                </div>
+                     
+                </div>
+                 <a href="{{url_for('cadastrarProduto')}}" class="btn btn-primary "> Disponibiize sua ferramenta !</a>
+            </div>
+               
+        </div>
+    </nav>
+    <!-- Close Header -->
+<!--search de pesquisa--> 
+<nav class="navbar bg-body-tertiary" style="margin-top: 10px;">
+  <div class="container-fluid">
+    <form action="{{url_for('pesquisa')}}" class="d-flex" role="search" style="width: 50%;">
+      <input class="form-control me-2" type="search" name="pesquisar" placeholder="pesquisar" aria-label="Search"/>
+      <button class="btn btn-primary" type="submit">pesquisar</button>
+    </form>
+  </div>
+</nav>
+<!--categorias-->
+<!--inicio dos cards-->
+  <h2 style="margin-left: 20px; margin-bottom: 20px;margin-top: 20px;">Categorias</h2>
+  <div class="card-group">
+    <div class="card">
+      <img src="https://blog.meritocomercial.com.br/wp-content/uploads/2019/11/ferramentas-para-ter-em-casa-pixabay.jpg"  class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Marcenaria</h5>
+        <p class="card-text">confira as melhores ferramentas de Marcenaria aqui na ConstruSmart a melhor plataforma de aluguel de ferramentas digital.</p>
+        <a href="{{url_for('categoria', categoria='marcenaria')}}" class="btn btn-primary "> Confira!</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://blog.coremma.com.br/wp-content/uploads/2022/08/qual-kit-de-ferramentas-mais-completo.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Construçao</h5>
+        <p class="card-text">confira as melhores ferramentas de construçao aqui na ConstruSmart a melhor plataforma de aluguel de ferramentas digital..</p>
+        <a href="{{url_for('categoria', categoria='construcao')}}" class="btn btn-primary "> Confira!</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://img.freepik.com/fotos-gratis/ferramentas-para-criacao-de-bicicletas-em-oficina_23-2148866651.jpg?t=st=1732111569~exp=1732115169~hmac=9a34052330993e6b7be058178959239f879404fced0225b31e0c7d68c67556d5" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Soldagem</h5>
+        <p class="card-text">confira as melhores ferramentas de Soldagem aqui na ConstruSmart a melhor plataforma de aluguel de ferramentas digital.</p>
+        <a href="{{url_for('categoria', categoria='soldagem')}}" class="btn btn-primary "> Confira !</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card-group">
+    <div class="card">
+      <img src="https://blog.coremma.com.br/wp-content/uploads/2024/01/ferramentas-basicas-para-jardinagem.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Jardinagem</h5>
+        <p class="card-text">confira as melhores ferramentas de Jardinagem aqui na ConstruSmart a melhor plataforma de aluguel de ferramentas digital.</p>
+      <a href="{{url_for('categoria', categoria='jardinagem')}}" class="btn btn-primary "> Confira !</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://blog.caaaluminio.com.br/wp-content/uploads/2024/05/Ferramentas-eletricas_700x409_1.png"  class="card-img-top" style="width: 575px;">
+      <div class="card-body">
+        <h5 class="card-title">Eletrica</h5>
+        <p class="card-text">confira as melhores ferramentas Eletrica aqui na ConstruSmart a melhor plataforma de aluguel de ferramentas digital..</p>
+        <a href="{{url_for('categoria', categoria='eletrica')}}" class="btn btn-primary "> Confira !</a> <br>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://lh5.googleusercontent.com/proxy/WCJ-6ch1fkH_pajul0_CTkjBm7cj7DkzH9ni4aSoahYm5Osz5e03CgTc9jvi1v84j17GBSlKa1xgErJglVTjoZYPWPQ254bHp81ZM1KKTMF5z3E0nSJ7t26ETR4wRI7hfmQmJxwTYKKAq0d4Agq-bjf3YApyIRTpJPY" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Corte</h5>
+        <p class="card-text">confira as melhores ferramentas de Corte aqui na ConstruSmart a melhor plataforma de aluguel de ferramentas digital.</p>
+        <a href="{{url_for('categoria', categoria='corte')}}" class="btn btn-primary "> Confira !</a>
+      </div>
+    </div>
+  </div>
+
+<!--fim dos cards-->
+
+
+</body>

@@ -1,0 +1,40 @@
+{% extends 'admin/base.html'%}
+
+
+
+{%block content%}
+<form method="POST" enctype="multipart/form-data" class="row g-3">
+    
+    <div class="col-md-6">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" name="nome" required>
+    </div>
+
+    
+    <div class="col-md-6">
+        <label for="sobrenome" class="form-label">Sobrenome</label>
+        <input type="text" class="form-control" name="sobrenome" required>
+    </div>
+
+     <div class="col-md-6">
+        <label for="data" class="form-label">Data</label>
+        <input type="text" class="form-control" name="data" required>
+    </div>
+
+    
+    <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" name="email" required>
+    </div>
+
+    <div class="col-md-6">
+        <label for="pass" class="form-label">Senha</label>
+        <input type="password" class="form-control" name="pass" required>
+    </div>
+
+
+    <div class="col-12">
+        <button name="salvar" type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+</form>
+{%endblock%}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Negocio Fechado</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='img/dashboard_img/apple-icon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='img/icons/favicon.ico')}}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/templatemo.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/custom.css')}}">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard_css/style.css')}}">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <img src="{{url_for('static', filename='img/dashboard_img/ConstruSmart2025-06-24 at 17.28.18.jpeg')}}"  width="250px">
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('home')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('about')}}">sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{{url_for('consultoria')}}">consultoria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  link-personalizado" href="{url_for('contato')}">Contato</a>
+                        </li>
+                    </ul>
+   </nav>
+
+    <!--formulario -->
+    <div class="form-al">
+<form method="POST" enctype="multipart/form-data">
+  <input type="text" name="titulo" placeholder="Título" class="form-control" required><br>
+  <textarea name="descricao" placeholder="Descrição" class="form-control" required></textarea><br>
+  <select class="form-select" class="form-control" style="font-family: 'Roboto', sans-serif; color: rgb(126, 123, 123);" name="categoria" required>
+  <option value="" selected disabled >Selecione a categoria </option>
+  <option value="construcao">Construçao</option>
+  <option value="eletrica">Eletrica</option>
+  <option value="marcenaria">Marcenaria</option>
+  <option value="jardinagem">Jardinagem</option>
+  <option value="soldagem">Soldagem</option>
+  <option value="corte">Corte</option>
+</select> <br>
+  <input type="number" name="preco" placeholder="Preço" class="form-control" required><br>
+  <input type="file" name="imagem" class="form-control" required><br>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+    </div>
+    
+</body>
